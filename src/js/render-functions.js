@@ -48,9 +48,10 @@ function imagesTemplate(images) {
 }
 
 export function renderImage(images) {
-  ul.innerHTML = imagesTemplate(images);
+  ul.insertAdjacentHTML('beforeend', imagesTemplate(images));
   lightbox.refresh();
 }
+
 
 const lightbox = new SimpleLightbox('.gallery-list a', {
   captionsData: 'alt',
